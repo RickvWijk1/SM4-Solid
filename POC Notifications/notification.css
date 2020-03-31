@@ -1,0 +1,38 @@
+#sticky_bar {
+    padding: 8px 5px;
+    background: #222;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+    box-shadow: 0px 1px 11px #888888;
+    color: #fff;
+    font-family: 'Viga', sans-serif;
+    font-size: 1.1em;
+}
+#sticky_bar_text, #sticky_bar_btn {
+    display: inline-block;
+}
+#sticky_bar_btn a {
+  background:red;
+  color:#fff;
+  padding:2px 5px;
+  text-decoration:none;
+  border-radius:3px;
+}
+#sticky_bar_close .icon-close {
+    font-size: 14px;
+    top: 15px;
+    right: 25px;
+    width: 15px;
+    height: 15px;
+    opacity: .3;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    line-height: 15px;
+    z-index: 1000;
+    text-decoration: none;
+}

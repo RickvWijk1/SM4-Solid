@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="notifications">
+
+<!-- Kaart 1 -->
+            <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                    <img
+                        src="https://in-lite.nl/sites/default/files/styles/fc_w912_h420/public/img/paragraph/block-media-text/media_tekst_afbeelding_nieuw_vennep_3.jpg?itok=rwarEgIJ" />
+                </div>
+
+                <div class="notifications__item__content">
+                    <span class="notifications__item__title">Huis & Tuin</span>
+                    <span class="notifications__item__message">Recent gezocht naar: Grasmaaier</span>
+                </div>
+
+                <div>
+                    <div class="notifications__item__option archive js-option">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="notifications__item__option delete js-option">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+<!-- Kaart 2 -->
+            <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/NintendoSwitchLogo.svg/1200px-NintendoSwitchLogo.svg.png" />
+                </div>
+
+                <div class="notifications__item__content">
+                    <span class="notifications__item__title">Nintendo Switch</span>
+                    <span class="notifications__item__message">Recent gezocht naar: Mario Kart Deluxe</span>
+                </div>
+
+                <div>
+                    <div class="notifications__item__option archive js-option">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="notifications__item__option delete js-option">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+<!-- Kaart 3 -->
+            <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                    <img
+                        src="http://1.bp.blogspot.com/-l-2BBv13ibY/T2l08Z6j9zI/AAAAAAAAAgc/UE6VI4Tw-uE/s1600/03+michael_jackson_84(1).jpg" />
+                </div>
+
+                <div class="notifications__item__content">
+                    <span class="notifications__item__title">Muziek</span>
+                    <span class="notifications__item__message">Recent gezocht naar: Michael Jackson</span>
+                </div>
+
+                <div>
+                    <div class="notifications__item__option archive js-option">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="notifications__item__option delete js-option">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+<!-- Kaart 4 -->            
+            <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                    <img
+                        src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/hmua2-vid1_PF1?wid=1960&hei=1102&fmt=jpeg&qlt=80&op_sharpen=1&op_usm=0.5,0.5&.v=1564684774372" />
+                </div>
+
+                <div class="notifications__item__content">
+                    <span class="notifications__item__title">Beeld & Geluid</span>
+                    <span class="notifications__item__message">Recent gezocht naar: LG UltraFine 32" Monitor</span>
+                </div>
+
+                <div>
+                    <div class="notifications__item__option archive js-option">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="notifications__item__option delete js-option">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+
+<!-- Kaart 5 -->
+            <div class="notifications__item">
+                <div class="notifications__item__avatar">
+                    <img
+                        src="https://www.lg.com/nl/images/koelkasten/gsb325pvqv/gallery/large01.jpg" />
+                </div>
+
+                <div class="notifications__item__content">
+                    <span class="notifications__item__title">Elektronica</span>
+                    <span class="notifications__item__message">Recent gezocht naar: LG Koelkast A+++</span>
+                </div>
+
+                <div>
+                    <div class="notifications__item__option archive js-option">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="notifications__item__option delete js-option">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    (function () {
+
+        /* Btn acties */
+        let optionBtns = document.querySelectorAll('.js-option');
+
+        for (var i = 0; i < optionBtns.length; i++) {
+
+            /* Luistert naar Btn klik */
+            optionBtns[i].addEventListener('click', function (e) {
+
+                var notificationCard = this.parentNode.parentNode;
+                var clickBtn = this;
+
+                /* Animatie uitvoeren */
+                requestAnimationFrame(function () {
+
+                    archiveOrDelete(clickBtn, notificationCard);
+
+                    /* Weg vervagen animatie */
+                    window.setTimeout(function () {
+                        requestAnimationFrame(function () {
+                            notificationCard.style.transition = 'all .4s ease';
+                            notificationCard.style.height = 0;
+                            notificationCard.style.margin = 0;
+                            notificationCard.style.padding = 0;
+                        });
+
+                        /* Permanent verwijderen van een kaart */
+                        window.setTimeout(function () {
+                            notificationCard.parentNode.removeChild(
+                                notificationCard);
+                        }, 1500);
+                    }, 1500);
+                });
+            })
+        }
+
+        /* Class toevoegen add/delete */
+        var archiveOrDelete = function (clickBtn, notificationCard) {
+            if (clickBtn.classList.contains('archive')) {
+                notificationCard.classList.add('archive');
+            } else if (clickBtn.classList.contains('delete')) {
+                notificationCard.classList.add('delete');
+            }
+        }
+
+    })()
+</script>
+
+</html>

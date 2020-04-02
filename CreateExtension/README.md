@@ -14,7 +14,7 @@ Er wordt gekozen een Google Chrome extensie te maken aangezien dit de populairst
 &nbsp;
 
 ## **Wat is een Google Chrome extensie?**
-Een extensie binnen Google Chrome is een klein software programma dat de Chrome browser kan aanpassen verbeteren qua functionaliteit en uiterlijk.
+Een extensie binnen Google Chrome is een klein software programma dat de Chrome browser kan aanpassen/verbeteren qua functionaliteit en uiterlijk.
 
 &nbsp;
 

@@ -173,6 +173,7 @@ Je kunt nu de achtergrondkleur van de webpagina veranderen met de extensie door 
 &nbsp;
 
 #### De extensie is klaar!
+![image info](GifExtensionWorking.gif)
 &nbsp;
 
 ## **Hoe nu verder?**

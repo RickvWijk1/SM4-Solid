@@ -163,8 +163,9 @@ Hier vraagt de code om de kleur van de button en past deze kleur toe op de achte
 &nbsp;
 
 Klik nu op de reload link.
+
 ![alt text](https://developer.chrome.com/static/images/get_started/view_background.png "Klik op de Reload link")
-&nbsp;
+
 
 ![alt text](https://developer.chrome.com/static/images/get_started/popup_grey.png "Klik op de button om de achtergrondkleur te veranderen")
 

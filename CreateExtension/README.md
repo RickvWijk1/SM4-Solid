@@ -177,3 +177,8 @@ Je kunt nu de achtergrondkleur van de webpagina veranderen met de extensie door 
 
 ## **Hoe nu verder?**
 Nu we een Chrome extensie kunnen maken die een webpagina's DOM kan aanpassen, gaan we onderzoeken hoe we advertenties binnen de browser kunnen detecteren zodat we ze vervolgens kunnen aanpassen (of eventueel overlappen). Adblockers kunnen dit al dus het is zeker mogelijk!
+
+&nbsp;
+
+## Bronnen
+https://developer.chrome.com/extensions/getstarted

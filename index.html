@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC machine learning</title>
+</head>
+<body>
+    <button type="button" id="A" onclick="addA()">25%</button>
+    <button type="button" id="B" onclick="addB()">25%</button>
+    <button type="button" id="C" onclick="addC()">25%</button>
+    <button type="button" id="D" onclick="addD()">25%</button>
+</body>
+</html>
+<style>
+    button{
+        height: 100px;
+        width: 100px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+
+    }
+</style>
+<script>
+    let A = 25;
+    let B = 25;
+    let C = 25;
+    let D = 25;
+
+    function addA(){
+        A = A + 3;
+        B = B - 1;
+        C = C - 1;
+        D = D - 1;
+        document.getElementById("A").innerHTML = A + "%"
+        document.getElementById("B").innerHTML = B + "%"
+        document.getElementById("C").innerHTML = C + "%"
+        document.getElementById("D").innerHTML = D + "%"
+    }
+    function addB(){
+        A = A - 1;
+        B = B + 3;
+        C = C - 1;
+        D = D - 1;
+        document.getElementById("A").innerHTML = A + "%"
+        document.getElementById("B").innerHTML = B + "%"
+        document.getElementById("C").innerHTML = C + "%"
+        document.getElementById("D").innerHTML = D + "%"
+    }
+    function addC(){
+        A = A - 1;
+        B = B - 1;
+        C = C + 3;
+        D = D - 1;
+        document.getElementById("A").innerHTML = A + "%"
+        document.getElementById("B").innerHTML = B + "%"
+        document.getElementById("C").innerHTML = C + "%"
+        document.getElementById("D").innerHTML = D + "%"
+    }
+    function addD(){
+        A = A - 1;
+        B = B - 1;
+        C = C - 1;
+        D = D + 3;
+        document.getElementById("A").innerHTML = A + "%"
+        document.getElementById("B").innerHTML = B + "%"
+        document.getElementById("C").innerHTML = C + "%"
+        document.getElementById("D").innerHTML = D + "%"
+    }
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+
+    <title>POC interesse selectie</title>
+</head>
+<div class="overlay" id="overlay">
+    <div class="header">
+        <div class="clear" onclick="clearform()">CLEAR</div>
+        <h2>Select your subjects</h2>
+        <div class="save" onclick="save()">SAVE</div>
+    </div>
+    
+    <div class="container">
+        <div class="subbox">
+            <input type="checkbox" id="subbox01" name="TV&Beamers" value="TV&Beamers" checked>
+            <label for="TV&Beamers"> TV & Beamers</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox02" name="Compters&Laptops" value="Compters&Laptops" checked>
+            <label for="Compters&Laptops"> Compters & Laptops</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox03" name="Smartphones&Tablets" value="Smartphones&Tablets" checked>
+            <label for="Smartphones&Tablets"> Smartphones & Tablets</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox04" name="Audio&HighFi" value="Audio&HighFi" checked>
+            <label for="Audio&HighFi"> Audio & HighFi</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox05" name="HouseHold&Living" value="HouseHold&Living" checked>
+            <label for="HouseHold&Living"> Household & Living</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox06" name="Photography&Videotography" value="Photography&Videotography" checked>
+            <label for="Photography&Videotography"> Photography & Videotography</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox07" name="Gardening&Tools" value="Gardening&Tools" checked>
+            <label for="Gardening&Tools"> Gardening & Tools</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox08" name="Sports&Health" value="Sports&Health" checked>
+            <label for="Sports&Health"> Sports & Health</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox09" name="Kitchen&Cooking" value="Kitchen&Cooking" checked>
+            <label for="Kitchen&Cooking"> Kitchen & Cooking</label>
+        </div>
+        <div class="subbox">
+            <input type="checkbox" id="subbox10" name="Software" value="Software" checked>
+            <label for="Software"> Software</label>
+        </div>
+    </div>
+     <h2>Select how much Electronics you want in your feed:</h2>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+      
+      <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+      </script>
+    
+        
+
+    </div>
+</div>
+
+<body>
+    <h1>let's find out what your interest are!</h1>
+
+    <div class="container">
+        <div class="checkbox" id="checkbox01" onclick="check01()">
+            <img src="https://image.flaticon.com/icons/svg/937/937363.svg" alt="" height="50">
+            <p>Electronics & Gadgets</p>
+        </div>
+
+        <div class="checkbox" id="checkbox02" onclick="check02()">
+            <img src="https://image.flaticon.com/icons/svg/1170/1170627.svg" alt="" height="50">
+            <p>Groceries</p>
+        </div>
+        <div class="checkbox" id="checkbox03" onclick="check03()">
+            <img src="https://image.flaticon.com/icons/svg/832/832988.svg" alt="" height="50">
+            <p>vehicels</p>
+        </div>
+        <div class="checkbox" id="checkbox04" onclick="check04()">
+            <img src="https://image.flaticon.com/icons/svg/891/891911.svg" alt="" height="50">
+            <p>Vacations</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

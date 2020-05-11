@@ -13,7 +13,7 @@ Het maken van een login gebaseerd op Solid helpt ons inzichten te geven hoe Soli
 
 &nbsp;
 
-## **Wat is Solid?
+## **Wat is Solid?**
 Solid is een framework waarmee applicaties op een gedecentraliseerde wijze geschreven kunnen worden. Kortom, je privacy is in eigen handen.
 
 &nbsp;
